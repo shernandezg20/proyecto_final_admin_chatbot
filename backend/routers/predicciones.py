@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import FastAPI, APIRouter, UploadFile, File, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from crud import crud
 from core.database import get_db
@@ -29,3 +29,8 @@ def aceptar_prediccion(data: EstadoInput, db: Session = Depends(get_db)):
 def rechazar_prediccion(data: EstadoInput, db: Session = Depends(get_db)):
     success = crud.actualizar_estado_prediccion(db, data.id, "rechazado")
     return {"success": success}
+
+@router.post("/upload-csv")
+async def upload_csv(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    crud.guardar_productos_desde_csv(db, file)
+    return {"message": "Productos guardados"}

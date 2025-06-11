@@ -1,0 +1,71 @@
+__pycache__/
+*.pyc
+# ---------------------
+# frontend/admin-panel IGNORADOS
+# ---------------------
+
+# Compiled output
+frontend/admin-panel/dist
+frontend/admin-panel/tmp
+frontend/admin-panel/out-tsc
+frontend/admin-panel/bazel-out
+
+# Node
+frontend/admin-panel/node_modules
+frontend/admin-panel/npm-debug.log
+frontend/admin-panel/yarn-error.log
+
+# IDEs and editors
+frontend/admin-panel/.idea/
+frontend/admin-panel/.project
+frontend/admin-panel/.classpath
+frontend/admin-panel/.c9/
+frontend/admin-panel/*.launch
+frontend/admin-panel/.settings/
+frontend/admin-panel/*.sublime-workspace
+
+# Visual Studio Code
+frontend/admin-panel/.vscode/*
+!frontend/admin-panel/.vscode/settings.json
+!frontend/admin-panel/.vscode/tasks.json
+!frontend/admin-panel/.vscode/launch.json
+!frontend/admin-panel/.vscode/extensions.json
+frontend/admin-panel/.history/*
+
+# Miscellaneous
+frontend/admin-panel/.angular/cache
+frontend/admin-panel/.sass-cache/
+frontend/admin-panel/connect.lock
+frontend/admin-panel/coverage
+frontend/admin-panel/libpeerconnection.log
+frontend/admin-panel/testem.log
+frontend/admin-panel/typings
+
+# System files
+frontend/admin-panel/.DS_Store
+frontend/admin-panel/Thumbs.db
+
+# ---------------------
+# BACKEND IGNORADOS
+# ---------------------
+
+# Entornos virtuales
+backend/venv/
+backend/**/venv/
+**/venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos específicos de Python
+.Python
+env/
+ENV/
+venv/
+*.env
+*.env.*
+
+# System files
+backend/.DS_Store
+backend/Thumbs.db

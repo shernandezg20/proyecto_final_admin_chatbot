@@ -1,0 +1,18 @@
+<h2>Predicciones</h2>
+<table>
+  <tr>
+    <th>Producto</th>
+    <th>Precio Predicho</th>
+    <th>Precio Oficial</th>
+    <th>Acción</th>
+  </tr>
+  <tr *ngFor="let pred of predicciones">
+    <td>{{ pred.nombre }}</td>
+    <td>{{ pred.precio_predicho }}</td>
+    <td>{{ pred.precio_real }}</td>
+    <td>
+      <button (click)="aceptar(pred.id_prediccion)">Aceptar</button>
+      <button (click)="rechazar(pred.id_prediccion)">Rechazar</button>
+    </td>
+  </tr>
+</table>

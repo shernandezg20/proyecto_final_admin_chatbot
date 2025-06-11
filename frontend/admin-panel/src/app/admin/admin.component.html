@@ -1,0 +1,32 @@
+<div class="admin-container">
+  <h2>Predicciones de productos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio Predicho</th>
+        <th>Precio Oficial</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of predicciones">
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.precio_predicho | currency }}</td>
+        <td>{{ p.precio_real | currency }}</td>
+        <td>{{ p.estado }}</td>
+        <td>
+          <button (click)="aceptar(p.id)">Aceptar</button>
+          <button (click)="rechazar(p.id)">Rechazar</button>
+        </td>
+        <td>
+          <input [(ngModel)]="p.precio_real" type="number" min="0" />
+          <button (click)="guardarPrecio(p)">Guardar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <canvas id="prediccionChart" width="800" height="300"></canvas>
+</div>

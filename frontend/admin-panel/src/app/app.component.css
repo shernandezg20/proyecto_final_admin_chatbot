@@ -1,0 +1,53 @@
+/* General layout */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  max-width: 1000px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Link styling */
+nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #333;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover & active effects */
+nav a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Optional: Active link style if you use Angular's routerLinkActive */
+nav a.router-link-active {
+  background-color: #388e3c;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}

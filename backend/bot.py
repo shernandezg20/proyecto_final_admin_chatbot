@@ -1,7 +1,7 @@
 import requests
 import time
 
-TOKEN = '7587096066:AAGCKzjolaVy23xvBb4fPj4M3HkHGGD1fqk'
+TOKEN = 'xxx'
 API_URL = 'http://localhost:8000'
 URL = f'https://api.telegram.org/bot{TOKEN}/'
 UPDATE_OFFSET = None

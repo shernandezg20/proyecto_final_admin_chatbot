@@ -17,14 +17,14 @@ export class ApiService {
   }
 
   getPredicciones(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.BASE_URL}/predicciones`);
+    return this.http.get<any[]>(`${this.BASE_URL}/predicciones/`);
   }
 
   aceptarPrediccion(id: number): Observable<any> {
-    return this.http.post(`${this.BASE_URL}/predicciones/aceptar`, { id });
-  }
+  return this.http.post(`${this.BASE_URL}/predicciones/aceptar`, { id });
+}
 
-  rechazarPrediccion(id: number): Observable<any> {
-    return this.http.post(`${this.BASE_URL}/predicciones/rechazar`, { id });
-  }
+rechazarPrediccion(id: number): Observable<any> {
+  return this.http.post(`${this.BASE_URL}/predicciones/rechazar`, { id });
+}
 }

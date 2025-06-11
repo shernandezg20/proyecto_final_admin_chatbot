@@ -30,7 +30,9 @@ def buscar_producto(q: str = Query(..., description="Texto enviado por el usuari
     try:
         result = db.execute(query, {"query": f"%{q}%"}).fetchall()
         if not result:
-            raise HTTPException(status_code=404, detail="No se encontraron productos relacionados")
+            # raise HTTPException(status_code=404, detail="No se encontraron productos relacionados")
+            return []
+        
         productos = [
             ProductoRespuesta(
                 nombre=row[0],

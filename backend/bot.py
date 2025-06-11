@@ -42,7 +42,7 @@ def main():
                     send_message(chat_id, 'No se encontraron productos según tu búsqueda.')
                 else:
                     for p in productos:
-                        mensaje = f"*{p['nombre']}*\nPrecio Predicho: Q{p['precio_predicho']:.2f}\nPrecio Real: Q{p['precio_real']:.2f}\n{p['descripcion']}"
+                        mensaje = f"*{p['nombre']}*\nPrecio: Q{p['precio_real']:.2f}\n{p['descripcion']}"
                         if p.get('imagen_url'):
                             send_message(chat_id, mensaje, parse_mode='Markdown')
                             # Opcional: enviar imagen

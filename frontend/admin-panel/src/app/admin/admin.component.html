@@ -17,8 +17,8 @@
         <td>{{ p.precio_real | currency }}</td>
         <td>{{ p.estado }}</td>
         <td>
-          <button (click)="aceptar(p.id)">Aceptar</button>
-          <button (click)="rechazar(p.id)">Rechazar</button>
+          <button (click)="aceptar(p.id_prediccion)">Aceptar</button>
+          <button (click)="rechazar(p.id_prediccion)">Rechazar</button>
         </td>
         <td>
           <input [(ngModel)]="p.precio_real" type="number" min="0" />

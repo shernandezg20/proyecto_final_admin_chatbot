@@ -1,11 +1,20 @@
 from fastapi import FastAPI
 from core.database import Base, engine
 from routers import productos, predicciones, precios
+from fastapi.middleware.cors import CORSMiddleware
 
 # Crear tablas si no existen
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Incluir routers
 app.include_router(productos.router)
